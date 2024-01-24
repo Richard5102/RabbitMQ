@@ -17,11 +17,11 @@ public class EmitLog {
         factory.setUsername("Restaurante");
         factory.setPassword("testing123");
 
-        for (int i = 0; i < 25; i++) {
+        for (int i = 1; i < 10000; i++) {
             try (Connection connection = factory.newConnection();
                  Channel channel = connection.createChannel()) {
 
-                String message = "Hello world!, message number: "+ i;
+                String message = "Txto de pruebaá'qq{+q´q2!+ i";
 
 
                 channel.basicPublish(EXCHANGE_NAME, "", null, message.getBytes("UTF-8"));
@@ -31,5 +31,7 @@ public class EmitLog {
                 throw (exception);
             }
         }
+
+
     }
 }

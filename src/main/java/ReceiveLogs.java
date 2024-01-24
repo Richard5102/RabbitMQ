@@ -4,7 +4,7 @@ import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.DeliverCallback;
 
 public class ReceiveLogs {
-    private static final String QUEUE = "QuueDataOut2";
+    private static final String QUEUE = "QueueDataOut4";
 
     public static void main(String[] argv) throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
